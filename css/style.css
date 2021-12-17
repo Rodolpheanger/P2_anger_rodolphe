@@ -1,4 +1,3 @@
-
 /***** Propriété box-sizing *****/
 
 * {
@@ -19,15 +18,7 @@ a {
     color: black;
 }
 
-h1, h2 {
-    font-weight: bold;
-}
-
-h3 {
-    font-weight: bold;
-}
-
-h4 {
+h1, h2, h3, h4 {
     font-weight: bold;
 }
 
@@ -92,7 +83,7 @@ form {
     display: flex;
 }
 
-.icon_map {
+.icone_map {
     padding: 17px 17px 6px 21px;
     height: 50px;
     border-radius: 20px 0 0 20px;
@@ -118,6 +109,7 @@ form {
     color: white;
     background: #0065FC;
     font-weight: bold;
+    border-style: none;
     border-radius: 0 20px 20px 0;
     height: 50px;
     padding: 0 20px 0 20px;
@@ -129,43 +121,8 @@ form {
     background-color: #004bbb;
 }
 
-/* ------ Bouton Recherche mobile ------ */
-
-.btn_submit_mobile {
+.btn_submit i {
     display: none;
-    position: relative;
-    transform: translateX(-30px);
-}
-
-.fond_btn_recherche_mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 19px;
-    background: #0065FC;
-    color: white;
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
-    z-index: 1;
-    transition: 0.3s;
-}
-
-.btn_submit_mobile:hover > .fond_btn_recherche_mobile {
-    background-color: #004bbb;
-}
-
-.btn_submit_mobile input {
-   
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent;
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
-    z-index: 2;
-    cursor: pointer;
 }
 
 /***** Section - Filtres *****/
@@ -181,54 +138,51 @@ form {
 }
 
 .btn_filtre {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px 0;
+    margin: 20px;
+    border-radius: 50px;
+    border: #d2d2d2 solid 2px;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.btn_filtre_icon {
+.btn_filtre .icone_child {
+    padding: 15px 18px;
+}
+
+.btn_filtre .icone_heart {
+    padding: 15px 17px;
+}
+
+.btn_filtre_icone {
+    position: relative;
+    left: -18px;
     color: #0065FC;
     border-radius: 50px;
     background: #DEEBFF;
     border: #DEEBFF solid 2px;
     padding: 15px;
-    z-index: 2;
     transition: 0.3s;
 }
 
-.btn_filtre_title {
-    border: #d2d2d2 solid 2px;
-    border-radius: 50px;
-    padding: 13px 16px 13px 56px;
-    transform: translateX(-46px);
-    font-weight: bold;
-    z-index: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: 0.3s;
+.btn_filtre_titre {
+    position: relative;
+    left: -5px;
 }
-
-/* animation bouton filtre - début */
 
 .btn_filtre:hover {
     transform: scale(1.1);
-}
-
-.btn_filtre:hover > .btn_filtre_icon {
-    background-color: #0065FC;
-    color: #DEEBFF;
-    border: #d2d2d2 solid 2px;
-}
-
-.btn_filtre:hover > .btn_filtre_title {
     background-color: #DEEBFF;
     color: #0065FC;
     border: #0065FC solid 2px;
 }
 
-/* animation bouton filtre - fin */
+.btn_filtre:hover > .btn_filtre_icone {
+    background-color: #0065FC;
+    color: #DEEBFF;
+    border: #d2d2d2 solid 2px;
+}
 
 #informations {
     display: flex;
@@ -280,16 +234,12 @@ form {
     transition: 0.3s;
 }
 
-/* Animation cartes hebergements - début */
-
 .carte_hebergements:hover {
     border: #DEEBFF 6px solid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     color: #0065FC;
     transform: scale(1.1);
 }
-
-/* Animation cartes hebergements - fin */
 
 .carte_hebergements img {
     border-radius: 20px 20px 0 0;
@@ -327,8 +277,6 @@ form {
 .etoile_grise {
     color: #F2F2F2;
 }
-
-
 
 .afficher_plus {
     width: 95%;
@@ -375,16 +323,12 @@ form {
     transition: 0.3s;
 }
 
-/* Animation cartes populaires - début */
-
 .carte_populaires:hover {
     border: #DEEBFF 6px solid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     color: #0065FC;
     transform: scale(1.1);
 }
-
-/* Animation cartes populaires - fin */
 
 .carte_populaires img {
     width: 40%;
@@ -412,7 +356,6 @@ form {
 /***** Section - Activités *****/
 
 #activites {
-    width: 100%;
     margin: 50px 0;
 }
 
@@ -431,7 +374,6 @@ form {
     justify-content: space-between;
     width: 22.5%;
     height: 500px;
-
 }
 
 .carte_activite {
@@ -586,6 +528,9 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     main h1 {
@@ -759,22 +704,32 @@ footer a:hover {
     /***** Section - Recherche - Mobiles *****/
 
     #form_recherche {
-        margin: 50px 0 20px 20px;
-        width: 90%;
+        padding: 30px 0 20px 20px;
+        width: 100%;
     }
 
-    /* .input_recherche
-     {
-        width: auto;
-    } */
-                                                                                         /* todo */
+    .input_recherche {
+        width: 100%;
+        max-width: none;
+    }
+
     .btn_submit {
+        padding: 18px;
+        height: 50px;
+        width: 50px;
+        border-radius: 20px;
+        position: relative;
+        left: -20px;
+    }
+
+    .btn_submit span {
         display: none;
     }
 
-    .btn_submit_mobile {
+    .btn_submit i {
         display: block;
     }
+
     /***** Section - Filtres - Mobiles *****/
 
     #filtres {
@@ -786,21 +741,15 @@ footer a:hover {
     }
 
     .btn_filtre {
-        font-size: 20px;    
-    }
-    
-    .btn_filtre_icon {
-        padding: 15px;
-    }
-    
-    .btn_filtre_title {
-        padding: 13px 16px 13px 56px;
-        transform: translateX(-46px);
+        font-size: 20px;
+        margin-left: 0;   
     }
     
     #informations {
         margin-left: 20px;
     }
+
+    /***** Section - Résultats - Mobiles *****/
 
     #resultats {
         flex-direction: column-reverse;
