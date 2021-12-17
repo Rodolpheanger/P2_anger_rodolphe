@@ -703,7 +703,7 @@ footer a:hover {
     }
 
     main h1, main p {
-        margin: 50px 5px 20px 20px;
+        margin: 25px 5px 20px 20px;
         width: 90%;
     }
 
@@ -753,6 +753,7 @@ footer a:hover {
     
     #informations {
         margin-left: 20px;
+        margin-top: 20px;
     }
 
     /***** Section - Résultats - Mobiles *****/
