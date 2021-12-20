@@ -470,9 +470,19 @@ footer a:hover {
     color: #0065FC;
 }
 
+/***************************************************** Responsive - Très Grands Desktop *****************************************************/
+@media screen and (min-width: 1921px) {
+
+        header, main, footer {
+            max-width: 1920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+
 /***************************************************** Responsive - Grands Desktop *****************************************************/
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1700px) and (max-width: 1921px) {
 
     #logo_header {
         margin-left: 60px;
@@ -652,7 +662,7 @@ footer a:hover {
     /****************** Footer - Tablettes *****************/
 
     footer {
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding-left: 6%;
     }
 } 
