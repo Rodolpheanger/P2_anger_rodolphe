@@ -1,9 +1,7 @@
-/***** Propriété box-sizing *****/
+/***** Propriété box-sizing: border-box (les width et height des éléments inclus les padding et border, mais par les margin) *****/
 
 * {
-    box-sizing: border-box; /* Opera/IE 8+ */
-    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
-    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+    box-sizing: border-box;
 }
 
 /***** Propriétés générales de la page *****/
@@ -105,7 +103,7 @@ form {
     color: rgb(0, 0, 0);
 }
 
-.btn_submit {
+.bouton_submit {
     color: white;
     background: #0065FC;
     font-weight: bold;
@@ -117,11 +115,11 @@ form {
     transition: 0.3s;
 }
 
-.btn_submit:hover {
+.bouton_submit:hover {
     background-color: #004bbb;
 }
 
-.btn_submit i {
+.bouton_submit i {
     display: none;
 }
 
@@ -197,7 +195,7 @@ form {
     padding: 5px 10px 5px 10px;
 }
 
-/***** Section - Résultats *****/
+/***** Div - Résultats *****/
 
 #resultats {
     display: flex;
@@ -266,7 +264,7 @@ form {
 
 .etoiles {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 10px;
 }
 
@@ -308,7 +306,7 @@ form {
     margin-bottom: 14px;
 }
 
-.ico_chart {
+.icone_chart {
     height: 27px;
     width: 25px;
 }
@@ -551,6 +549,12 @@ footer a:hover {
 
     main p {
         margin-bottom: 40px;
+        text-align: center;
+    }
+
+    #formulaire_recherche {
+        display: flex;
+        justify-content: center;
     }
 
     /***** Section - Filtres - Tablettes *****/
@@ -569,7 +573,7 @@ footer a:hover {
         margin-left: 40px;
     }
 
-    /***** Section - Résultats - Tablettes *****/
+    /***** Div - Résultats - Tablettes *****/
 
     #resultats {
         flex-direction: column-reverse;
@@ -719,7 +723,7 @@ footer a:hover {
 
     /***** Section - Recherche - Mobiles *****/
 
-    #form_recherche {
+    #formulaire_recherche {
         padding: 30px 0 20px 20px;
         width: 100%;
     }
@@ -729,7 +733,7 @@ footer a:hover {
         max-width: none;
     }
 
-    .btn_submit {
+    .bouton_submit {
         padding: 18px;
         height: 50px;
         width: 50px;
@@ -738,11 +742,11 @@ footer a:hover {
         left: -20px;
     }
 
-    .btn_submit span {
+    .bouton_submit span {
         display: none;
     }
 
-    .btn_submit i {
+    .bouton_submit i {
         display: block;
     }
 
@@ -766,7 +770,7 @@ footer a:hover {
         margin-top: 20px;
     }
 
-    /***** Section - Résultats - Mobiles *****/
+    /***** Div - Résultats - Mobiles *****/
 
     #resultats {
         flex-direction: column-reverse;
@@ -801,11 +805,11 @@ footer a:hover {
     }
 
     .description_hebergements h4 {
-        margin: 0 0 3px 0;
+        margin: 0 0 3px 4px;
     }
 
     .description_hebergements p {
-        margin: 0 0 20px 0;
+        margin: 0 0 20px 4px;
     }
 
     .description_hebergements .etoiles {
