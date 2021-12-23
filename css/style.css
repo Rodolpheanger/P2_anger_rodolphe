@@ -16,16 +16,16 @@ a {
     color: black;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, strong {
     font-weight: bold;
+}
+
+h3 {
+    font-size: 16px;
 }
 
 input {
     border: none;
-}
-
-strong {
-    font-weight: bold;
 }
 
 ul {
@@ -131,7 +131,8 @@ form {
     flex-wrap: wrap;
 }
 
-#filtres h3 {
+#filtres p {
+    font-size: 19px;
     margin-right: 20px;
 }
 
@@ -195,7 +196,7 @@ form {
     padding: 5px 10px 5px 10px;
 }
 
-/***** Div - Résultats *****/
+/***** Section - Résultats *****/
 
 #resultats {
     display: flex;
@@ -254,7 +255,7 @@ form {
     padding: 10px;
 }
 
-.description_hebergements h4 {
+.description_hebergements h3 {
     margin: 0 0 6px 0;
 }
 
@@ -278,6 +279,7 @@ form {
 
 .afficher_plus {
     width: 95%;
+    font-size: 19px;
 }
 
 .afficher_plus:hover {
@@ -343,7 +345,7 @@ form {
     padding: 15px;
 }
 
-.description_populaires h4 {
+.description_populaires h3 {
     margin: 0 0 6px 0;
 }
 
@@ -460,6 +462,11 @@ footer div {
     margin: 30px 0;
 }
 
+footer p {
+    font-weight: bold;
+    font-size: 19px;
+}
+
 footer li {
     line-height: 35px;
 }
@@ -565,7 +572,7 @@ footer a:hover {
         margin-top: 40px;
     }
 
-    #filtres h3 {
+    #filtres p {
         padding-left: 20px;
     }
 
@@ -573,7 +580,7 @@ footer a:hover {
         margin-left: 40px;
     }
 
-    /***** Div - Résultats - Tablettes *****/
+    /***** Section - Résultats - Tablettes *****/
 
     #resultats {
         flex-direction: column-reverse;
@@ -756,7 +763,7 @@ footer a:hover {
         margin-left: 20px;
     }
 
-    #filtres h3 {
+    #filtres p {
         width: 100%;
     }
 
@@ -770,7 +777,7 @@ footer a:hover {
         margin-top: 20px;
     }
 
-    /***** Div - Résultats - Mobiles *****/
+    /***** Section - Résultats - Mobiles *****/
 
     #resultats {
         flex-direction: column-reverse;
@@ -804,7 +811,7 @@ footer a:hover {
         padding: 10px;
     }
 
-    .description_hebergements h4 {
+    .description_hebergements h3 {
         margin: 0 0 3px 4px;
     }
 
@@ -822,7 +829,7 @@ footer a:hover {
         width: 90%;
     }
 
-    .afficher_plus h3 {
+    .afficher_plus p {
         margin-top: 10px;
     }
 
